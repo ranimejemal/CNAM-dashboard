@@ -7,21 +7,16 @@ export default defineConfig({
   server: {
     host: "::",
     port: 8080,
+    hmr: {
+      overlay: false,
+    },
   },
   plugins: [
     react()
   ],
-  base: '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
-  },
-  optimizeDeps: {
-    include: ["react-leaflet", "leaflet"],
-  },
-  build: {
-    // increase chunk size warning limit to 1MB
-    chunkSizeWarningLimit: 1000,
   },
 });
