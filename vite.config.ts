@@ -10,7 +10,6 @@ export default defineConfig({
   },
   plugins: [
     react()
-    
   ],
   base: '/',
   resolve: {
@@ -20,5 +19,9 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ["react-leaflet", "leaflet"],
+  },
+  build: {
+    // increase chunk size warning limit to 1MB
+    chunkSizeWarningLimit: 1000,
   },
 });
