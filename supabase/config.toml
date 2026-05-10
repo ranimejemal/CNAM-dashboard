@@ -1,0 +1,40 @@
+project_id = "drdwycjgjtzrbyzwlslz"
+
+[functions.send-otp]
+verify_jwt = false
+
+[functions.verify-otp]
+verify_jwt = false
+
+[functions.send-security-alert]
+verify_jwt = false
+
+[functions.send-registration-otp]
+verify_jwt = false
+
+[functions.verify-registration-otp]
+verify_jwt = false
+
+[functions.send-welcome-email]
+verify_jwt = false
+
+[functions.delete-user]
+verify_jwt = false
+
+[functions.update-user]
+verify_jwt = false
+
+[functions.send-password-change-otp]
+verify_jwt = false
+
+[functions.change-password]
+verify_jwt = false
+
+[functions.send-password-expiry-reminder]
+verify_jwt = false
+
+[functions.ai-chat]
+verify_jwt = false
+
+[functions.security-login]
+verify_jwt = false
