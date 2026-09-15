@@ -4,6 +4,22 @@ A role-based web portal simulating Tunisia's national health insurance system (C
 
 This is the web application layer of the "Cloud CNAM Infra" project — it's the front-facing app that runs inside the GNS3/OpenStack network simulation (VLAN-segmented, Wazuh-monitored) built for that project.
 
+**Live demo**: [cnam-dashboard-je5c.vercel.app/login](https://cnam-dashboard-je5c.vercel.app/login)
+
+## Trying the live demo
+
+There are no shared/public demo credentials — every account, including regular users, goes through identity verification and manual approval before it can log in (this is deliberate: it's the actual access-control workflow the system is built to demonstrate, not a gap). To try it:
+
+1. Go to [`/register`](https://cnam-dashboard-je5c.vercel.app/register) and create an account (email + password, minimum 12 characters).
+2. Verify the email via the OTP code sent to you.
+3. Submit a CNAM document (any PDF/JPEG/PNG under 10MB works for demo purposes — this is a simulated attestation upload, not validated against a real document).
+4. The account sits in **Pending** status until approved.
+5. **Approval has to come from the Admin Sup (owner) account** — if you're trying this as a visitor rather than the owner, the registration request just sits there until she manually approves it in the Admin Sup dashboard (`/app/super-admin/utilisateurs`). This isn't an instant self-serve demo.
+
+Provider registration (`/register/prestataire`) and internal staff registration (`/register/internal`, for admin/agent/validator/security_engineer roles) follow the same pending-until-approved pattern, gated more tightly per the role's privilege level.
+
+If you want a faster hands-on demo (no waiting on approval), ask to be granted a specific role directly, or request a walkthrough instead of self-registering.
+
 ## Tech stack
 
 - **Vite + React 18 + TypeScript**
